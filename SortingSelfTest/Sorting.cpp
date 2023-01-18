@@ -19,14 +19,59 @@ vector<int> sort(vector<int> v){
 
 }
 
+int search(vector<int> v, int i){
+
+    int index = -1;
+
+    for(int j = 0; j < v.size(); j++){
+        if(v[j] == i){
+            index = j;
+        } 
+    }
+
+    if(index == -1){
+        cout << "The element " << i << " has not been found in the given vector.\n";
+    } else{
+        cout << "The element " << i << " is at index " << index << "\n";
+    }
+
+    return index;
+}
+
 
 int main(){
 
-    vector<int> vec = {2, 1, 7, 6, 20, 3};
-    vector<int> vec1 = sort(vec);
-    for(int i = 0; i < vec1.size(); i++){
-        cout << vec1[i] << ", ";
+    vector<int> vec;
+
+    for(int x = 0; x < 6; x++){
+        int nmbr = x + 1;
+        int in;
+        cout << "Please enter value " << nmbr << ": ";
+        cin >>in;
+        cout << "\n";
+        vec.push_back(in);
     }
 
-
+    int option = 0;
+    while(option != 3){
+        cout << "Please enter an option for what you want to do with your vector: \n" << "1): Sort\n" << "2): Search\n" << "3). Exit\n" << "\n";
+        cout << "Option: "; cin >> option; cout << "\n";
+        if(option == 1){
+            vector<int> vec1 = sort(vec);
+            cout << "-----------------------------------------\n";
+            cout << "Your sorted vector is: ";
+            for(int i = 0; i < vec1.size(); i++){
+                cout << vec1[i] << ", ";
+                }
+            cout << "\n-----------------------------------------";
+            cout << "\n";
+        } else if(option == 2){
+            int z;
+            cout << "-----------------------------------------\n";
+            cout << "Enter a number you want to search for: ";
+            cin >> z;
+            search(vec, z);
+            cout << "-----------------------------------------\n\n";
+        }
+     }
 }
