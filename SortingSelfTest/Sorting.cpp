@@ -52,26 +52,38 @@ int main(){
         vec.push_back(in);
     }
 
-    int option = 0;
-    while(option != 3){
+     int option = 0;
+     while(option != 3){
         cout << "Please enter an option for what you want to do with your vector: \n" << "1): Sort\n" << "2): Search\n" << "3). Exit\n" << "\n";
         cout << "Option: "; cin >> option; cout << "\n";
-        if(option == 1){
+    switch(option){
+        case 1: 
+        {
             vector<int> vec1 = sort(vec);
-            cout << "-----------------------------------------\n";
+            cout << "----------------------------------------------\n";
             cout << "Your sorted vector is: ";
-            for(int i = 0; i < vec1.size(); i++){
+            for(int i = 0; i < vec1.size() - 1; i++){
                 cout << vec1[i] << ", ";
                 }
-            cout << "\n-----------------------------------------";
-            cout << "\n";
-        } else if(option == 2){
+            cout << vec1[vec1.size() - 1];
+            cout << "\n----------------------------------------------\n\n";
+            break;
+        }
+        case 2: 
+        {
             int z;
-            cout << "-----------------------------------------\n";
+            cout << "----------------------------------------------\n";
             cout << "Enter a number you want to search for: ";
             cin >> z;
             search(vec, z);
-            cout << "-----------------------------------------\n\n";
+            cout << "----------------------------------------------\n\n";
+            break;
+        }
+        case 3:
+        {
+            break;
+        }
+
         }
      }
 }
