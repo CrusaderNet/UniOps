@@ -3,6 +3,8 @@
 //To compute the gross pay of employee based upon the number of hours worked and an hourly pay rate
 
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
 
 int main() {
@@ -20,6 +22,8 @@ int main() {
 
 	//Calculate the gross pay
 	grossPay = hoursWorked * hourlyPayRate;
+
+	cout << fixed << showpoint << setprecision(2);
 
 	//Display the gross pay
 	cout << "The gross pay is $" << grossPay << endl;
