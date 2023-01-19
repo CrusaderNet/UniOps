@@ -23,6 +23,7 @@ int main() {
 	//Calculate the gross pay
 	grossPay = hoursWorked * hourlyPayRate;
 
+	//Set the numeric output formatting to two decimal places
 	cout << fixed << showpoint << setprecision(2);
 
 	//Display the gross pay
