@@ -1,3 +1,4 @@
 ﻿  Sorting.cpp
-C:\Users\Houst\source\repos\UniOps\Self Tests\Sorting Self Test\Sorting.cpp(8,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Sorting Self Test.vcxproj -> C:\Users\Houst\source\repos\UniOps\Self Tests\x64\Debug\Sorting Self Test.exe
+B:\Visual Studio Repos\UniOps\Self Tests\Sorting Self Test\Sorting.cpp(8,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  LINK : B:\Visual Studio Repos\UniOps\Self Tests\x64\Debug\Sorting Self Test.exe not found or not built by the last incremental link; performing full link
+  Sorting Self Test.vcxproj -> B:\Visual Studio Repos\UniOps\Self Tests\x64\Debug\Sorting Self Test.exe
