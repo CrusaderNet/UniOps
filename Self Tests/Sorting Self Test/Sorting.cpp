@@ -1,7 +1,44 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <regex>
 
 using namespace std;
+
+bool is_integer(const string& s) {
+
+    return regex_match(s, regex("^[-+]?\[0-9]+$"));
+
+}
+
+string valid_input(int nmbr) {
+
+    while (true) {
+
+        string input;
+
+        cout << "[" << nmbr << "] " << "Please enter value: ";
+        cin >> input;
+
+        if (is_integer(input)) {
+
+            return (input);
+
+        }
+        else if (input == "Q") {
+
+            return "Q";
+
+        }
+        else {
+
+            cout << "Invalid input\n";
+
+        }
+        input = "";
+    }
+
+}
 
 vector<int> sort(vector<int> v) {
 
@@ -19,7 +56,7 @@ vector<int> sort(vector<int> v) {
 
 }
 
-int search(vector<int> v, int i) {
+int search(const vector<int>& v, const int i) {
 
     int index = -1;
 
@@ -43,19 +80,36 @@ int search(vector<int> v, int i) {
 int main() {
 
     vector<int> vec;
+    int nmbr = 1;
 
-    for (int x = 0; x < 6; x++) {
+    cout << "Enter in the numbers for your vector, and input Q to exit\n";
+    cout << "---------------------------------------------------------\n";
+
+    while (true) {
+
+        string result = valid_input(nmbr);
+
+        if(result == "Q") break;
+
+        vec.push_back(stoi(result));
+
+        nmbr++;
+    }
+
+
+
+    /*for (int x = 0; x < 6; x++) {
         int nmbr = x + 1;
         int in;
         cout << "Please enter value " << nmbr << ": ";
         cin >> in;
         cout << "\n";
         vec.push_back(in);
-    }
+    }*/
 
     int option = 0;
     while (option != 3) {
-        cout << "Please enter an option for what you want to do with your vector: \n" << "1): Sort\n" << "2): Search\n" << "3). Exit\n" << "\n";
+        cout << "\nPlease enter an option for what you want to do with your vector: \n" << "1): Sort\n" << "2): Search\n" << "3). Exit\n" << "\n";
         cout << "Option: "; cin >> option; cout << "\n";
         switch (option) {
         case 1:
