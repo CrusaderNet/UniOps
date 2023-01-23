@@ -1,8 +1,52 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <regex>
 
 using namespace std;
 
+//This program takes user inputs into a vector, and then provides options to Sort or Search the user defined vector.
+
+
+
+//Uses Regular Expression search to check the user input string for anything other than integers. If the user input has only integers, returns true.
+bool is_integer(const string& s) {
+
+    return regex_match(s, regex("^[-+]?\[0-9]+$"));
+
+}
+
+//Input Validity checking function that calls the is_integer function. If the input is a integer, returns that input as a string.
+string valid_input(int nmbr) {
+
+    while (true) {
+
+        string input;
+
+        cout << "[" << nmbr << "] " << "Please enter value: ";
+        cin >> input;
+
+        if (is_integer(input)) {
+
+            return (input);
+
+        }
+        else if (input == "Q") {
+
+            return "Q";
+
+        }
+        else {
+
+            cout << "Invalid input\n";
+
+        }
+        input = "";
+    }
+
+}
+
+//Sort function that iterates through each index of the vector multiple times, sorting the vector from smallest to largest value. Does not modify the original vector.
 vector<int> sort(vector<int> v) {
 
     int i = v.size();
@@ -19,7 +63,8 @@ vector<int> sort(vector<int> v) {
 
 }
 
-int search(vector<int> v, int i) {
+//Search function that iterates through the user vector and returns if the integer is found in the vector, and the index it is found in.
+int search(const vector<int>& v, const int i) {
 
     int index = -1;
 
@@ -43,19 +88,28 @@ int search(vector<int> v, int i) {
 int main() {
 
     vector<int> vec;
+    int nmbr = 1;
 
-    for (int x = 0; x < 6; x++) {
-        int nmbr = x + 1;
-        int in;
-        cout << "Please enter value " << nmbr << ": ";
-        cin >> in;
-        cout << "\n";
-        vec.push_back(in);
+    cout << "Enter in the numbers for your vector, and input Q to exit\n";
+    cout << "---------------------------------------------------------\n";
+
+    //Accepting inputs for user defined vector, with calling input failure checking function. 
+    while (true) {
+
+        string result = valid_input(nmbr);
+
+        if(result == "Q") break;
+
+        vec.push_back(stoi(result));
+
+        nmbr++;
     }
 
     int option = 0;
+
+    //Option Menu loop, taking option number inputs from user and calling functions based on user input.
     while (option != 3) {
-        cout << "Please enter an option for what you want to do with your vector: \n" << "1): Sort\n" << "2): Search\n" << "3). Exit\n" << "\n";
+        cout << "\nPlease enter an option for what you want to do with your vector: \n" << "1): Sort\n" << "2): Search\n" << "3). Exit\n" << "\n";
         cout << "Option: "; cin >> option; cout << "\n";
         switch (option) {
         case 1:
@@ -87,4 +141,7 @@ int main() {
 
         }
     }
+
+    return 0;
+
 }
