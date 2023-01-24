@@ -47,6 +47,7 @@ string valid_input(int nmbr) {
 }
 
 //Sort function that iterates through each index of the vector multiple times, sorting the vector from smallest to largest value. Does not modify the original vector.
+//This is a Bubble Sort algorithm.
 vector<int> sort(vector<int> v) {
 
     int i = v.size();
