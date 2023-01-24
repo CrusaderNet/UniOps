@@ -25,7 +25,8 @@ int main()
 	total = subtotal + tax + tip;
 
 	cout << fixed << showpoint << setprecision(2);
-	cout << "\n-------- BILL --------\n" << "    Meal Cost: $" << subtotal << endl << "    Tax Amount: $" << tax << endl << "    Tip Amount: $" << tip << endl << "    Total Bill: $" << total << endl;
+	cout << "\n-------- BILL --------\n" << "    Meal Cost: $" << subtotal << endl << "    Tax Amount: $" << tax << endl 
+		<< "    Tip Amount: $" << tip << endl << "    Total Bill: $" << total << endl;
 
 	return 0;
 
