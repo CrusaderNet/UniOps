@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS1410 In Class Project", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Restaurant Bill Calc", "Restaurant Bill Calc\Restaurant Bill Calc.vcxproj", "{25C49D4F-632B-4938-BFDE-3FB48131DDBB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Circuit Price", "Circuit Price\Circuit Price.vcxproj", "{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{25C49D4F-632B-4938-BFDE-3FB48131DDBB}.Release|x64.Build.0 = Release|x64
 		{25C49D4F-632B-4938-BFDE-3FB48131DDBB}.Release|x86.ActiveCfg = Release|Win32
 		{25C49D4F-632B-4938-BFDE-3FB48131DDBB}.Release|x86.Build.0 = Release|Win32
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Debug|x64.ActiveCfg = Debug|x64
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Debug|x64.Build.0 = Debug|x64
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Debug|x86.ActiveCfg = Debug|Win32
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Debug|x86.Build.0 = Debug|Win32
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Release|x64.ActiveCfg = Release|x64
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Release|x64.Build.0 = Release|x64
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Release|x86.ActiveCfg = Release|Win32
+		{2AD0E2FC-8F71-485B-82C4-D63E0AA403AF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
