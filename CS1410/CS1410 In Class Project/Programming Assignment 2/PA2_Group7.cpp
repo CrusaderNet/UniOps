@@ -30,10 +30,12 @@ int main() {
 	cout << endl << "Please enter the amount of minutes used: ";
 	cin >> minutesUsed;
 	cout << endl;
-	//Input Validation
+	//Begin Input Validation, starting with Menu Input Validation
 	if (menuInput == 'A' || menuInput == 'B' || menuInput == 'C' || menuInput == 'D' || menuInput == 'E') {
 
+		//Minutes Input Validation
 		if (minutesUsed >= 0) {
+
 			//If both input validations are passed, begin switch statement
 			switch (menuInput) {
 				
