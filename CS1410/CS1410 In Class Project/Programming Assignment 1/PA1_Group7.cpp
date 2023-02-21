@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 	
-	//Initialize Variables
+	//Declaring Variables
 	int startAge, midAge, endAge, yearsElapsed, paymentYears;
 	double annualInterest, monthlyInterest, paymentAnnual, paymentInterestTotal, monthInterestTotal, futureValue, totalInterestEarned;
 
