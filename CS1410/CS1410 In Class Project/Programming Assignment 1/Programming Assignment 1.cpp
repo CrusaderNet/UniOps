@@ -1,7 +1,7 @@
 //Group 7
 //Seth Tourish, Diego Moya, Jonathan Lopez
 //February 21st, 2023
-//To create a compounding interest calculator for monthly payments followed by monthly interest gained.
+//To create a compounding interest calculator for Annual payments followed by monthly interest gained.
 
 #include <iostream>
 #include <cmath>
