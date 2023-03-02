@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DistanceTraveled.cpp">
+    <ClCompile Include="PenniesForPay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
