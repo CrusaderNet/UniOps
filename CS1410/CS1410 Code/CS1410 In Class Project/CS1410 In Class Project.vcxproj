@@ -128,6 +128,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bank Charges.cpp" />
+    <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="DistanceTraveled.cpp" />
     <ClCompile Include="PenniesForPay.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
