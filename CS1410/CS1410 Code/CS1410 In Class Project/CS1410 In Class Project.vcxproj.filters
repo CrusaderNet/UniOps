@@ -27,5 +27,8 @@
     <ClCompile Include="Bank Charges.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HighestLowest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
