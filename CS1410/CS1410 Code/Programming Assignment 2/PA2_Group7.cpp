@@ -22,7 +22,7 @@ int main() {
 		<< "Package C: For $49.99 per month 750 minutes are provided. Additional minutes are $0.21 per minute." << endl
 		<< "Package D: For $59.99 per month 1000 minutes are provided. Additional minutes are $0.19 per minute." << endl
 		<< "Package E: For $69.99 per month unlimited minutes provided." << endl;
-	cout << "----------------------------------------------------------------------------------------------------";
+	cout << "----------------------------------------------------------------------------------------------------" << endl;
 
 	//Menu User option input
 	cout << "Please enter the letter of the package you have as a capital letter: ";
@@ -31,7 +31,7 @@ int main() {
 	cin >> minutesUsed;
 	cout << endl;
 	//Begin Input Validation, starting with Menu Input Validation
-	if (menuInput == 'A' || menuInput == 'B' || menuInput == 'C' || menuInput == 'D' || menuInput == 'E') {
+	if (menuInput >= 'A' && menuInput <= 'E') {
 
 		//Minutes Input Validation
 		if (minutesUsed >= 0) {
@@ -116,7 +116,7 @@ int main() {
 	}
 	//Package Input Validation failure statement
 	else {
-		cout << "You have made an incorrect package selection. Please select a package from the list." << endl;
+		cout << "You have made an incorrect package selection. Please select a package from the list, using a capital letter." << endl;
 	}
 
 
