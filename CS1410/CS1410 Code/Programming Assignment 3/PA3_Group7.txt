@@ -1,0 +1,5 @@
+The number of numbers in the file is: 200
+The highest number in the file is: 1000.00
+The smallest number in the file is: 7.00
+The sum of all the numbers in the file is: 105527.00
+The average of all the numbers in the file is: 527.63
