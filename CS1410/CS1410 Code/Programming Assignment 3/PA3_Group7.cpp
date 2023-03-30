@@ -59,6 +59,7 @@ int main() {
     }
     //Check if file did not open, and display an error message if file did not open
     else if (!inFile) {
+        cout << "There has been an error opening the file!" << endl;
         outFile << "There has been an error opening the file!" << endl;
     }
 
