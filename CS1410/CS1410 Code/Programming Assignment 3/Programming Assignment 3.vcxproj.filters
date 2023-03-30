@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="E:\Downloads\PA3_Group7.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PA3_Group7_1.cpp">
+    <ClCompile Include="PA3_Group7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
