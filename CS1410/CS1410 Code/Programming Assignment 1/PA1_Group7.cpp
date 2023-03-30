@@ -65,7 +65,9 @@ int main() {
 
 	//output interest totals
 	cout << "Total Interest Earned from age " << startAge << " to " << midAge << " is $" << paymentInterestTotal << endl;
+	cout << "Total Value at age " << midAge << " is $" << futureValue << endl;
 	cout << "Total Interest Earned from age " << midAge << " to " << endAge << " is $" << monthInterestTotal << endl;
+	cout << "Total Value at age " << endAge << " is $" << (futureValue + monthInterestTotal) << endl;
 	cout << "Total Interest Earned is $" << totalInterestEarned << endl << endl;
 
 	//end of program

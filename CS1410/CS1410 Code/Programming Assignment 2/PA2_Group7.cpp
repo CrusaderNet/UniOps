@@ -16,22 +16,24 @@ int main() {
 
 	//Start of menu, Menu formatting
 	cout << "Welcome to Cell Incorporated's Bill Calculator. Here are a list of the different packages: " << endl
-		 << "----------------------------------------------------------------------------------------------------";
+		 << "----------------------------------------------------------------------------------------------------" << endl;
 	cout << "Package A: For $29.99 per month 250 minutes are provided. Additional minutes are $0.27 per minute." << endl
 		<< "Package B: For $39.99 per month 500 minutes are provided. Additional minutes are $0.23 per minute." << endl
 		<< "Package C: For $49.99 per month 750 minutes are provided. Additional minutes are $0.21 per minute." << endl
 		<< "Package D: For $59.99 per month 1000 minutes are provided. Additional minutes are $0.19 per minute." << endl
 		<< "Package E: For $69.99 per month unlimited minutes provided." << endl;
-	cout << "----------------------------------------------------------------------------------------------------";
+	cout << "----------------------------------------------------------------------------------------------------" << endl;
 
 	//Menu User option input
 	cout << "Please enter the letter of the package you have as a capital letter: ";
 	cin >> menuInput;
-	cout << endl << "Please enter the amount of minutes used: ";
-	cin >> minutesUsed;
-	cout << endl;
+
 	//Begin Input Validation, starting with Menu Input Validation
-	if (menuInput == 'A' || menuInput == 'B' || menuInput == 'C' || menuInput == 'D' || menuInput == 'E') {
+	if ((menuInput >= 'A' && menuInput <= 'E') || (menuInput >= 'a' && menuInput <= 'e')) {
+
+		cout << endl << "Please enter the amount of minutes used: ";
+		cin >> minutesUsed;
+		cout << endl;
 
 		//Minutes Input Validation
 		if (minutesUsed >= 0) {
@@ -39,7 +41,8 @@ int main() {
 			//If both input validations are passed, begin switch statement
 			switch (menuInput) {
 				
-				case 'A' : {
+				case 'A':
+				case 'a':{
 					//check for minutes over package limit and if greater
 					if (minutesUsed > 250) {
 						totalBill = 29.99 + (minutesUsed - 250) * 0.27;
@@ -54,7 +57,8 @@ int main() {
 					break;
 				}
 
-				case 'B': {
+				case 'B':
+				case 'b':{
 					//check for minutes over package limit and if greater
 					if (minutesUsed > 500) {
 						totalBill = 39.99 + (minutesUsed - 500) * 0.23;
@@ -69,7 +73,8 @@ int main() {
 					break;
 				}
 
-				case 'C': {
+				case 'C':
+				case 'c': {
 					//check for minutes over package limit and if greater
 					if (minutesUsed > 750) {
 						totalBill = 49.99 + (minutesUsed - 750) * 0.21;
@@ -84,7 +89,8 @@ int main() {
 					break;
 				}
 
-				case 'D': {
+				case 'D':
+				case 'd': {
 					//check for minutes over package limit and if greater
 					if (minutesUsed > 1000) {
 						totalBill = 59.99 + (minutesUsed - 1000) * 0.19;
@@ -99,7 +105,8 @@ int main() {
 					break;
 				}
 
-				case 'E': {
+				case 'E':
+				case 'e': {
 					//Package E has a static price with no limit of minutes, so print the price to the console
 					cout << "Your Total Bill is $69.99";
 					break;
@@ -116,7 +123,7 @@ int main() {
 	}
 	//Package Input Validation failure statement
 	else {
-		cout << "You have made an incorrect package selection. Please select a package from the list." << endl;
+		cout << "You have made an incorrect package selection. Please select a package from the list, using a capital letter." << endl;
 	}
 
 
