@@ -115,7 +115,6 @@ void calculateGrade(double scores[], int scoreSize, char letterGrades[], int let
 
 	//Count incrementer to move on to the next student
 	count++;
-
 }
 
 //Function that is used to display all of the students final data: Their Name, Average Test Score, and Letter Grade
@@ -135,5 +134,4 @@ void displayGrade(string names[], int studentSize, char letterGrades[], int lett
 
 	//Formatting
 	cout << "------------------------------------------------------------------------" << endl;
-
 }
