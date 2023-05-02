@@ -1,7 +1,7 @@
 //Group 7
 //Seth Tourish, Diego Moya, Jonathan Lopez
 //April 25th, 2023
-//GRade Calculator that takes in a set of student's names and 4 test scores for each student, and calculates the average test score and final letter grade for each student. Prints out the results of the calculations.
+//Grade Calculator that takes in a set of student's names and 4 test scores for each student, and calculates the average test score and final letter grade for each student. Prints out the results of the calculations.
 
 //Preprocessor Directives
 #include <iostream>
