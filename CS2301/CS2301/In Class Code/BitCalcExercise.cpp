@@ -28,9 +28,9 @@ long long bitCalc(int size, string type) {
 	long long bitsTemp = 0;
 
 	if (type == "B")
-		bitsTemp = size * 8;
+		bitsTemp = size * pow(1024, 0) * 8;
 	else if (type == "KB")
-		bitsTemp = size * 1024 * 8;
+		bitsTemp = size * pow(1024, 1) * 8;
 	else if (type == "MB")
 		bitsTemp = size * pow(1024, 2) * 8;
 	else if (type == "GB")
