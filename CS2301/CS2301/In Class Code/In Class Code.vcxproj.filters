@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BitCalcExercise.cpp">
+    <ClCompile Include="ExcessMCalc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
