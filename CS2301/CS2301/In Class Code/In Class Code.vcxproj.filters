@@ -18,5 +18,14 @@
     <ClCompile Include="FloatToHex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ExcessMCalc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BitCalcExercise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FullAdder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

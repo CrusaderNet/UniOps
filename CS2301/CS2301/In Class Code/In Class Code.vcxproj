@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BitCalcExercise.cpp" />
+    <ClCompile Include="ExcessMCalc.cpp" />
     <ClCompile Include="FloatToHex.cpp" />
+    <ClCompile Include="FullAdder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
