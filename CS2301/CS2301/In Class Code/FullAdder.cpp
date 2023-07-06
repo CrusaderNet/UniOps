@@ -210,7 +210,7 @@ vector<bool> Full_Adder(vector<bool> num1, vector<bool> num2)
 
 		// it can be set in the add function.
 
-		result.push_back(add(num1.at(i), num2.at(i), carry));
+		result.insert(result.begin(),add(num1.at(i), num2.at(i), carry));
 
 	}
 
@@ -220,10 +220,11 @@ vector<bool> Full_Adder(vector<bool> num1, vector<bool> num2)
 
 	{
 
-		result.push_back(carry);
+		result.insert(result.begin(),carry);
 
 	}
 
+	/*
 	int start = 0;
 
 	int end = result.size() - 1;
@@ -245,7 +246,7 @@ vector<bool> Full_Adder(vector<bool> num1, vector<bool> num2)
 		end--;
 
 	}
-
+	*/
 	// Return the vector.
 
 	return result;
@@ -262,7 +263,7 @@ void display(vector<bool> vec)
 
 	{
 
-		cout << vec.at(i);
+		cout << vec[i];
 
 	}
 
