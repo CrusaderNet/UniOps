@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExcessMCalc.cpp">
+    <ClCompile Include="FloatToHex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
