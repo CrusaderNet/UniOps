@@ -2,7 +2,7 @@
 // It finds the area of a rectangle given length and width
 // It prints the length and width in ascending order
 
-// PLACE YOUR NAME HERE
+// Team-8 (Milly Flores 50%, Seth Tourish 50%)
 
 #include <iostream>
 using namespace std;
@@ -24,17 +24,18 @@ int main()
 	cin >> width;
 
 	// Fill in code to make lengthPtr point to length (hold its address)
+	lengthPtr = &length;
 
 	// Fill in code to make widthPtr point to width (hold its address)
-
-	area =	// Fill in code to find the area by using only the pointer variables
-
+	widthPtr = &width;
+	
+	area =	*lengthPtr * *widthPtr;// Fill in code to find the area by using only the pointer variables
 	cout << "The area is " << area << endl;
 
-	if (// Fill in the condition length > width by using only the pointer variables)
+	if (*lengthPtr > *widthPtr)
 		cout << "The length is greater than the width" << endl;
 
-	else if (// Fill in the condition of width > length by using only the pointer variables)
+	else if (*widthPtr > *lengthPtr)
 		cout << "The width is greater than the length" << endl;
 
 	else
