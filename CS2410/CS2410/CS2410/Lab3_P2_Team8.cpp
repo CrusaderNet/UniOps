@@ -26,7 +26,7 @@ int main()
 	monthSales = new float[numOfSales];// Fill in the code to allocate memory for the array pointed to by
 	// monthSales.
 
-	if (monthSales == nullptr)
+	if (!monthSales)
 	{
 		cout << "Error allocating memory!\n";
 		return 1;
@@ -50,6 +50,8 @@ int main()
 
 	// Fill in the code to deallocate memory assigned to the array.
 	delete [] monthSales;
+
+	monthSales = nullptr;
 
 	return 0;
 }
