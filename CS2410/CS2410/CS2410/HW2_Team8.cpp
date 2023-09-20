@@ -20,7 +20,7 @@ int main()
     int total = 0;
 
     //Take input for the number of students surveyed
-    cout << "How many students were surveyed? ";
+    cout << "Enter the number of Students surveyed: ";
     cin >> size;
 
     //Input Validation to check for negative numbers
@@ -42,7 +42,7 @@ int main()
         //Input Validation to check for negative numbers
         while (*(array + i) < 0)
         {
-            cout << "Please enter a positive number: ";
+            cout << "Please enter a positive number for Student " << i + 1 << ": ";
             cin >> *(array + i);
         }
     }
