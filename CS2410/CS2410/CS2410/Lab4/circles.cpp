@@ -14,13 +14,32 @@ const double PI = 3.14;
 Circles::Circles()
 {
 	radius = 1;
+	center_x = 0;
+	center_y = 0;
+}
+
+Circles::Circles(float r, int x, int y)
+{
+	radius = r;
+	center_x = x;
+	center_y = y;
 }
 
 // Fill in the code to implement the non-default constructor
 Circles::Circles(float r)
 {
 	radius = r;
+	center_x = 0;
+	center_y = 0;
 }
+
+Circles::Circles(int x, int y)
+{
+	radius = 1;
+	center_x = x;
+	center_y = y;
+}
+
 // Fill in the code to implement the findArea member function
 double Circles::findArea()
 {
@@ -44,11 +63,13 @@ void Circles::printCircleStats()
 
 // This procedure will take the coordinates of the center of the circle from
 // the user and place them in the appropriate member data.
+/*
 void Circles::setCenter(int x, int y)
 {
 	center_x = x;
 	center_y = y;
 }
+*/
 
 Circles::~Circles()
 {

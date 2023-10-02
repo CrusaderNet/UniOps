@@ -11,7 +11,9 @@ public:
 	double findCircumference();
 	void printCircleStats();	// This outputs the radius and center of the circle. 
 	Circles(float r);			// Constructor
+    Circles(float r, int x, int y);
 	Circles();					// Default constructor 
+    Circles(int x, int y);
     ~Circles();
 private:
 	float	radius;

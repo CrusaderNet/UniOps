@@ -11,8 +11,8 @@ using namespace std;
 int main()
 {
     //Sphere Case 0
-	Circles sphere(8);
-	sphere.setCenter(9, 10);
+	Circles sphere(8, 9, 10);
+	//sphere.setCenter(9, 10);
 	sphere.printCircleStats();
     cout << "The area of the circle is " << sphere.findArea() << endl;
 	cout << "The circumference of the circle is "
@@ -33,8 +33,7 @@ int main()
 		 << sphere2.findCircumference() << endl << endl;
 
     //Sphere Case 3
-    Circles sphere3;
-    sphere3.setCenter(15,16);
+    Circles sphere3(15, 16);
     sphere3.printCircleStats();
     cout << "The area of the circle is " << sphere3.findArea() << endl;
 	cout << "The circumference of the circle is "
