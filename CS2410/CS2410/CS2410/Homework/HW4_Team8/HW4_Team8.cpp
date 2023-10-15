@@ -3,7 +3,7 @@
 //Preprocessor Directives
 #include <iostream>
 #include <iomanip>
-#include "Rectangle.cpp"
+#include "Rectangle.h"
 
 using namespace std;
 
