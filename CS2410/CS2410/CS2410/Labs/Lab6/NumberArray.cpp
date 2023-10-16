@@ -49,6 +49,7 @@ float NumberArray::getElementValue(int index) const
         return aPtr[index];
 }
 
+//Get Average
 float NumberArray::getAverage()
 {
     float sum = 0;
