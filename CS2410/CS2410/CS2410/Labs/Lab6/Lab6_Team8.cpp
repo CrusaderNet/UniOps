@@ -33,8 +33,8 @@ int main()
     }
 
     //Copy first object to new second object
-    NumberArray numbers2(numbers);
-
+    NumberArray numbers2 = numbers;
+    
     cout << "--------------------------------------------------------" << endl;
 
     //Retrieve a number from any element of the array
