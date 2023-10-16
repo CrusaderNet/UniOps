@@ -32,8 +32,14 @@ int main()
     cout << "--------------------------------------------------------" << endl;
 
     //Retrieve a number from any element of the array
-    cout << "The numbers you entered are:" << endl;
+    cout << "The numbers you entered for the original Number Array are:" << endl;
     numbers.printNumberArray(numbers, size);
+
+    cout << "--------------------------------------------------------" << endl;
+
+    //Print Copied Array
+    cout << "The numbers for the copied Number Array are:" << endl;
+    numbers2.printNumberArray(numbers2, size);
 
     cout << "--------------------------------------------------------" << endl;
     
