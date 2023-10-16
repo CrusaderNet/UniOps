@@ -1,10 +1,16 @@
 //Team 8 - (Seth Tourish 50%, Milly Flores 50%)
 
+//Preprocessor Directives
 #include <iostream>
 #include "NumberArray.h"
 
+//Namespace Declaration
 using namespace std;
 
+//Function Prototypes
+void printNumberArray(const NumberArray &numbers, int size);
+
+//Driver Function
 int main()
 {
     int size;
@@ -33,13 +39,13 @@ int main()
 
     //Retrieve a number from any element of the array
     cout << "The numbers you entered for the original Number Array are:" << endl;
-    numbers.printNumberArray(numbers, size);
+    printNumberArray(numbers, size);
 
     cout << "--------------------------------------------------------" << endl;
 
     //Print Copied Array
     cout << "The numbers for the copied Number Array are:" << endl;
-    numbers2.printNumberArray(numbers2, size);
+    printNumberArray(numbers2, size);
 
     cout << "--------------------------------------------------------" << endl;
     
@@ -48,4 +54,13 @@ int main()
 
 
     return 0;
+}
+
+//Function that Prints the values of the NumberArray
+void printNumberArray(const NumberArray &numbers, int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        cout << "\tNumber " << i + 1 << ":  " << numbers.getElementValue(i) << endl;
+    }
 }

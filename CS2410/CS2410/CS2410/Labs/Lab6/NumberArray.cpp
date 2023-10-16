@@ -41,7 +41,7 @@ void NumberArray::setElementValue(float value, int index)
 }
 
 //Accessors
-float NumberArray::getElementValue(int index)
+float NumberArray::getElementValue(int index) const
 {
     if(index < 0 || index >= arraySize)
         exit(1);
@@ -57,14 +57,4 @@ float NumberArray::getAverage()
         sum += aPtr[i];
     }
     return sum / arraySize;
-}
-
-//Print Function
-void NumberArray::printNumberArray(NumberArray numbers, int size)
-{
-    for(int i = 0; i < size; i++)
-    {
-        cout << "\tNumber " << i + 1 << ":  " << numbers.getElementValue(i) << endl;
-    }
-
 }

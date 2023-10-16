@@ -17,11 +17,9 @@ public:
     NumberArray(const NumberArray &obj);
     //Getters
     float getAverage();
-    float getElementValue(int index);
+    float getElementValue(int index) const;
     //Setter
     void setElementValue(float value, int index);
-    //Print Function
-    void printNumberArray(NumberArray numbers, int size);
 };
 
 #endif
