@@ -22,7 +22,9 @@ public:
 	romanType();
 	//Parameterized Constructor
 	romanType(string r);
-	
+	//Destructor
+	~romanType();
+
 	//Function that sets the input value to variable
 	void setRomNum(string r);
 	//Function that get the input

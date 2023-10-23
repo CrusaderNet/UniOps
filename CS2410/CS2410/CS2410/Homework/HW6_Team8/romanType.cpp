@@ -22,6 +22,12 @@ romanType::romanType()
 	 RomNum = r;
 	 ToNum();
 }
+
+//Destructor
+romanType::~romanType()
+{
+	
+}
  
  //Function that sets the input value to variable
 void romanType :: setRomNum(string r)
