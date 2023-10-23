@@ -12,24 +12,24 @@ class NumDays
 
     public:
         //Constructor and destructor
-        NumDays(float);
+        NumDays(float h);
         ~NumDays();
 
         //setters
-        void setHours(float);
+        void setHours(float h);
         
         //getters
         float getHours() const;
         float getDays() const;
 
         //maniupulators
-        float convertToDays(float);
+        float convertToDays(float h);
 
         //operator overloads
-        NumDays operator+(const NumDays&);
-        bool operator>(const NumDays&);
-        bool operator<(const NumDays&);
-        bool operator==(const NumDays&);
+        NumDays operator+(const NumDays &right);
+        bool operator>(const NumDays &right);
+        bool operator<(const NumDays &right);
+        bool operator==(const NumDays &right);
 };
 
 #endif
