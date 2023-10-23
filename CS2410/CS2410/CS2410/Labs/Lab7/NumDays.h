@@ -3,6 +3,14 @@
 #ifndef NUMDAYS_H
 #define NUMDAYS_H
 
+#include <iostream>
+
+using namespace std;
+
+class NumDays;
+
+ostream& operator<<(ostream& os, const NumDays& obj);
+
 class NumDays
 {
     private:
@@ -24,6 +32,9 @@ class NumDays
 
         //maniupulators
         float convertToDays(float h);
+
+        //friend
+        friend ostream& operator<<(ostream& os, const NumDays& obj);
 
         //operator overloads
         NumDays operator+(const NumDays &right);

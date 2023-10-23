@@ -42,6 +42,13 @@ float NumDays::getDays() const
     return days;
 }
 
+//Friend
+ostream& operator<<(ostream& os, const NumDays& obj)
+{
+    os << obj.getDays();
+    return os;
+}
+
 //Operator overloads
 NumDays NumDays::operator+(const NumDays& right)
 {

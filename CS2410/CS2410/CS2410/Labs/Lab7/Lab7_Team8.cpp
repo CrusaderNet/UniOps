@@ -20,7 +20,7 @@ int main()
     cin >> hours_2;
 
     cout << endl;
-    
+
     //Create objects
     NumDays value1(hours_1);
     NumDays value2(hours_2);
@@ -31,8 +31,7 @@ int main()
     cout << endl;
 
     //Create object to hold sum of values 1 and 2
-    NumDays value3 = value1 + value2;
-    cout << "Value3 (in days): " << value3.getDays() << endl;
+    cout << "Value3 (in days): " << (value1 + value2) << endl;
     cout << endl;
 
     //Compare values 1 and 2
