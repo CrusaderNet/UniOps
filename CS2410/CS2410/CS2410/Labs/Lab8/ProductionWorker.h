@@ -11,7 +11,6 @@ class ProductionWorker : public Employee
 private:
     int shiftNum;       //1 for day shift, 2 for night shift
     double payRate;     //Hourly pay rate
-    string shiftName;   //Day or Night shift
 public:
 
     //Default constructor
@@ -19,7 +18,6 @@ public:
     {
         shiftNum = 0;
         payRate = 0.0;
-        shiftName = "";
     }
 
     //Constructor
@@ -27,12 +25,6 @@ public:
     {
         shiftNum = shift;
         payRate = rate;
-        if (shiftNum == 1)
-            shiftName = "Day";
-        else if (shiftNum == 2)
-            shiftName = "Night";
-        else
-            shiftName = "Invalid Shift Assigned!";
     }
 
     //Destructor
@@ -48,10 +40,6 @@ public:
     {
         payRate = rate;
     }
-    void setShiftName(string name)
-    {
-        shiftName = name;
-    }
 
     //Accessors
     int getShiftNumber() const
@@ -64,7 +52,12 @@ public:
     }
     string getShiftName() const
     {
-        return shiftName;
+        if (shiftNum == 1)
+            return "Day";
+        else if (shiftNum == 2)
+            return "Night";
+        else
+            return "Invalid Shift Assigned!";
     }
 };
 
