@@ -15,7 +15,6 @@ private:
 	int RSize = 0;
 	int CSize = 0;
 	int **Mat;
-	bool add, sub, mult;
 
 //Public functions
 public:
