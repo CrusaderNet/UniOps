@@ -1,59 +1,98 @@
+//Team 8 - (Seth Tourish 50%, Milly Flores 50%)
 
+//Preprocessor Directives
 #include <iostream>
-#include <cstdlib>
-#include <string>
 #include "matrixType.h"
 
 using namespace std;
 
+//Default constructor
 matrixType::matrixType()
 {
 	 RSize = 0;
 	 CSize = 0;
 }
 
+//Constructor
 matrixType::matrixType(int A, int B)
 {
 	RSize = A;
 	CSize = B;
 	Mat = new int* [RSize];
-	for (int i = 0; i < RSize; i++)
+	for(int i = 0; i < RSize; i++)
 	{
 		Mat[i] = new int[CSize];
 	}
 }
 
+//Destructor
 matrixType::~matrixType()
 {
-	for (int i = 0; i < RSize; i++)
+	//Delete each row of the matrix
+	for(int i = 0; i < RSize; i++)
 	{
-		delete[] Mat[i];
-		cout << "deleting row " << i << endl;
+		delete [] Mat[i];
 	}
 
-	delete[] Mat;
+	//Delete the matrix
+	delete [] Mat;
 }
 
-ostream &operator <<(ostream& os, const matrixType &right)
+//Copy constructor
+matrixType::matrixType(const matrixType& right)
 {
-	for (int i = 0; i < right.RSize; i++)
+	RSize = right.RSize;
+	CSize = right.CSize;
+	Mat = new int* [RSize];
+	for(int i = 0; i < RSize; i++)
 	{
-		for (int j = 0; j < right.CSize; j++)
+		Mat[i] = new int[CSize];
+	}
+	for(int i = 0; i < RSize; i++)
+	{
+		for(int j = 0; j < CSize; j++)
+		{
+			Mat[i][j] = right.Mat[i][j];
+		}
+	}
+}
+
+//Getters
+int matrixType::getRSize() const
+{
+	return RSize;
+}
+
+int matrixType::getCSize() const
+{
+	return CSize;
+}
+
+//Output overload operator
+ostream &operator<<(ostream& os, const matrixType &right)
+{
+	os << "\n";
+	for(int i = 0; i < right.RSize; i++)
+	{
+		for(int j = 0; j < right.CSize; j++)
 		{
 			os << right.Mat[i][j];
+			os << " ";
 		}
-		os << endl;
+		os << "\n";
 
 	}
 	return os;
 }
 
-istream& operator >>(istream& is, matrixType& right)
+//Input overload operator
+istream& operator>>(istream& is, matrixType& right)
 {
-	for (int i = 0; i < right.RSize; i++)
+	for(int i = 0; i < right.RSize; i++)
 	{
-		for (int j = 0; j < right.CSize; j++)
+		for(int j = 0; j < right.CSize; j++)
 		{
+			cout << "Enter the number for row " << i + 1 << " and column " << j + 1 << ": ";
 			is >> right.Mat[i][j];
 		}
 	}
@@ -61,19 +100,13 @@ istream& operator >>(istream& is, matrixType& right)
 }
 
 //Matrix addition overload operator
-matrixType matrixType :: operator+(const matrixType& right)
+matrixType matrixType::operator+(const matrixType& right)
 {
-	if (CSize != right.CSize || RSize != right.RSize)
-	{
-		cout << "Cannot add because the matrices are not the same ";
-		return *this;
-	}
-
 	matrixType Tot(RSize, CSize);
 
-	for (int i = 0; i < RSize; i++)
+	for(int i = 0; i < RSize; i++)
 	{
-		for (int j = 0; j < CSize; j++)
+		for(int j = 0; j < CSize; j++)
 		{
 			Tot.Mat[i][j] = Mat[i][j] + right.Mat[i][j];
 		}
@@ -81,19 +114,14 @@ matrixType matrixType :: operator+(const matrixType& right)
 	return Tot;
 }
 
-matrixType matrixType :: operator-(const matrixType& right)
+//Matrix subtraction overload operator
+matrixType matrixType::operator-(const matrixType& right)
 {
-	if (CSize != right.CSize || RSize != right.RSize)
-	{
-		cout << "Cannot subtract because the matrices are not the same ";
-		return *this;
-	}
-
 	matrixType Tot(RSize, CSize);
 
-	for (int i = 0; i < RSize; i++)
+	for(int i = 0; i < RSize; i++)
 	{
-		for (int j = 0; j < CSize; j++)
+		for(int j = 0; j < CSize; j++)
 		{
 			Tot.Mat[i][j] = Mat[i][j] - right.Mat[i][j];
 		}
@@ -102,21 +130,17 @@ matrixType matrixType :: operator-(const matrixType& right)
 
 }
 
-matrixType matrixType :: operator*(const matrixType& right)
+//Matrix multiplication overload operator
+matrixType matrixType::operator*(const matrixType& right)
 {
-	if (CSize != right.RSize)
-	{
-		cout << "Cannot multiply because the matrices are not compatible ";
-		return *this;
-	}
+	matrixType Tot(RSize, right.CSize);
 
-	matrixType Tot(RSize, CSize);
-
-	for (int i = 0; i < RSize; i++)
+	for(int i = 0; i < RSize; i++)
 	{
-		for (int k = 0; k < right.CSize; k++)
+		for(int k = 0; k < right.CSize; k++)
 		{
-			for (int j = 0; j < CSize; j++)
+			Tot.Mat[i][k] = 0;
+			for(int j = 0; j < right.RSize; j++)
 			{
 				Tot.Mat[i][k] += Mat[i][j] * right.Mat[j][k];
 			}
