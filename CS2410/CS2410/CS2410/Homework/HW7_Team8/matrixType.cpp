@@ -6,29 +6,34 @@
 
 using namespace std;
 
-matrixType:: matrixType()
+matrixType::matrixType()
 {
 	 RSize = 0;
 	 CSize = 0;
 }
+
 matrixType::matrixType(int A, int B)
 {
+	RSize = A;
+	CSize = B;
 	Mat = new int* [RSize];
 	for (int i = 0; i < RSize; i++)
 	{
-
 		Mat[i] = new int[CSize];
 	}
-	//RSize = A;
-	//CSize = B;
 }
+
 matrixType::~matrixType()
 {
 	for (int i = 0; i < RSize; i++)
 	{
 		delete[] Mat[i];
+		cout << "deleting row " << i << endl;
 	}
+
+	delete[] Mat;
 }
+
 ostream &operator <<(ostream& os, const matrixType &right)
 {
 	for (int i = 0; i < right.RSize; i++)
@@ -37,10 +42,12 @@ ostream &operator <<(ostream& os, const matrixType &right)
 		{
 			os << right.Mat[i][j];
 		}
+		os << endl;
 
 	}
 	return os;
 }
+
 istream& operator >>(istream& is, matrixType& right)
 {
 	for (int i = 0; i < right.RSize; i++)
@@ -52,15 +59,17 @@ istream& operator >>(istream& is, matrixType& right)
 	}
 	return is;
 }
+
+//Matrix addition overload operator
 matrixType matrixType :: operator+(const matrixType& right)
 {
-	if (CSize != right.CSize || RSize != right.RSize )
+	if (CSize != right.CSize || RSize != right.RSize)
 	{
 		cout << "Cannot add because the matrices are not the same ";
 		return *this;
 	}
 
-	matrixType Tot(RSize,CSize);
+	matrixType Tot(RSize, CSize);
 
 	for (int i = 0; i < RSize; i++)
 	{
@@ -70,8 +79,8 @@ matrixType matrixType :: operator+(const matrixType& right)
 		}
 	}
 	return Tot;
-	
 }
+
 matrixType matrixType :: operator-(const matrixType& right)
 {
 	if (CSize != right.CSize || RSize != right.RSize)
