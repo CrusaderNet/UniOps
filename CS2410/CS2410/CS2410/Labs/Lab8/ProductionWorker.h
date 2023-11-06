@@ -1,3 +1,4 @@
+//Team 8 - (Seth Tourish 50%, Milly Flores 50%)
 #ifndef PRODUCTIONWORKER_H
 #define PRODUCTIONWORKER_H
 #include "Employee.h"

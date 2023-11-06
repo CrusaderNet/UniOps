@@ -1,3 +1,4 @@
+//Team 8 - (Seth Tourish 50%, Milly Flores 50%)
 #include <iostream>
 #include <iomanip>
 #include "ProductionWorker.h"

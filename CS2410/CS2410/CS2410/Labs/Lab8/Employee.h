@@ -1,3 +1,4 @@
+//Team 8 - (Seth Tourish 50%, Milly Flores 50%)
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
