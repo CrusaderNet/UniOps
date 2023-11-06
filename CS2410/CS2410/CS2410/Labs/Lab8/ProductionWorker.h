@@ -40,7 +40,7 @@ public:
     {}
 
     //Mutators
-    void setshiftNum(int shift)
+    void setShiftNum(int shift)
     {
         shiftNum = shift;
     }
