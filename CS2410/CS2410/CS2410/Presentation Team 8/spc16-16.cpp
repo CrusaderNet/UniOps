@@ -18,13 +18,13 @@ int main()
 
 	// Test a ProductionWorker with an invalid
 	// employee number.
-	pwPtr = createProductionWorker("John Jones", "99999", "1/1/2006", 2, 18.00);
+	pwPtr = createProductionWorker("John Jones", "99999", "1/1/2006", 0, 18.00);
 	if (pwPtr != nullptr)
 		displayInfo(*pwPtr);
 
 	// Test a ProductionWorker with an invalid
 	// shift number.
-	pwPtr = createProductionWorker("John Jones", "AAA", "1/1/2006", 1, 18.00);
+	pwPtr = createProductionWorker("John Jones", "456", "1/1/2006", 1, 18.00);
 	if (pwPtr != nullptr)
 		displayInfo(*pwPtr);
 
