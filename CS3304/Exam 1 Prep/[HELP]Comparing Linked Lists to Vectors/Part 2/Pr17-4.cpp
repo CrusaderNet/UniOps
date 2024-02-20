@@ -1,16 +1,20 @@
 // This program demonstrates the deleteNode member function.
 #include <iostream>
-#include "NumberList.h"
+#include "LinkedList.h"
 #include <time.h>
 #include <vector>
+#include <list>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
    // Define a NumberList object.
-   NumberList list;
+   LinkedList<int> lst;
 
-   const int SIZE = 1000000;
+   list<int> lst2;
+
+   const int SIZE = 100000;
 
    vector<int> vec;
 
@@ -23,21 +27,38 @@ int main()
 
    for(int i = 0; i < SIZE; i++)
    {
-      list.appendNode(i);
+      lst.appendNode(i);
    }
 
-   // Delete the middle node.
-   cout << "Now deleting the node in the middle.\n";
+   for(int i = 0; i < SIZE; i++)
+   {
+      lst2.push_back(i);
+   }
 
-   clock_t begin, end;
+
+   clock_t begin, end, b2, e2, b3, e3;
 	double elapsed_seconds;
 
-	begin = clock();
+	b2 = clock();
 	//CODE TO TIME ->
-	for (unsigned int i = 0; i < SIZE; i++)
-	{
-      list.deleteNode(i);
-	}
+   for(int i = 0; i < SIZE; i++)
+   {
+      vec.erase(vec.begin());
+   }
+
+	e2 = clock();
+
+   cout << "Vector Deletion Time: ";
+   cout << setprecision(15);
+	elapsed_seconds = double(e2 - b2) / CLOCKS_PER_SEC;
+	cout << elapsed_seconds << endl;
+   
+   begin = clock();
+	//CODE TO TIME ->
+   for(int i = 0; i < SIZE; i++)
+   {
+      lst.deleteNode(i);
+   }
 
 
 	end = clock();
@@ -46,17 +67,19 @@ int main()
 	elapsed_seconds = double(end - begin) / CLOCKS_PER_SEC;
 	cout << elapsed_seconds << endl;
 
-   // Delete the middle node.
-   cout << "Now deleting the Vector value in the middle.\n";
 
-	begin = clock();
+   b3 = clock();
 	//CODE TO TIME ->
-   vec.erase(vec.begin(), vec.end());
+   for(int i = 0; i < SIZE; i++)
+   {
+      lst2.erase(lst2.begin());
+   }   
 
-	end = clock();
+	e3 = clock();
 
-   cout << "Vector Deletion Time: ";
-	elapsed_seconds = double(end - begin) / CLOCKS_PER_SEC;
+   cout << "STL List Deletion Time: ";
+   cout << setprecision(15);
+	elapsed_seconds = double(e3 - b3) / CLOCKS_PER_SEC;
 	cout << elapsed_seconds << endl;
 
    //// Delete the last node.
