@@ -26,8 +26,6 @@ int main()
     vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     list<list<int>> lst;
 
-    Copy_Vector_To_List_2d(vec, lst);
-
     cout << "Vector: " << endl;
     for(auto i1 = vec.begin(); i1 != vec.end(); i1++)
     {
@@ -37,6 +35,8 @@ int main()
         }
         cout << endl;
     }
+
+    Copy_Vector_To_List_2d(vec, lst);
 
     cout << "List: " << endl;
     for(auto i1 = lst.begin(); i1 != lst.end(); i1++)
