@@ -18,8 +18,8 @@ public class EvenOddArrayList {
         
         int arr[][] = new int[5][5];
         
-        ArrayList<Integer> even = new ArrayList<Integer>();
-        ArrayList<Integer> odd = new ArrayList<Integer>();
+        ArrayList<Integer> even = new ArrayList<>();
+        ArrayList<Integer> odd = new ArrayList<>();
         
         System.out.println("Random Numbers: ");
         for(int i = 0; i < arr.length; i++){

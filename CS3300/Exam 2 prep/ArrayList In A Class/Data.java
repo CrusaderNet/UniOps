@@ -15,8 +15,12 @@ public class Data {
     
     Scanner sc = new Scanner(System.in);
     
-        private ArrayList<Integer> numbers = new ArrayList<Integer>();
+        private final ArrayList<Integer> numbers;
         
+        public Data(){
+            this.numbers = new ArrayList<>();
+        }
+
         public void Display_Menu(){
             System.out.println("***************************");
             System.out.println("MAIN MENU");
