@@ -1,4 +1,4 @@
-////Homework 4 - Romberg Integration
+//Homework 4 - Romberg Integration
 //CS 3308 - Numerical Methods
 //Seth Tourish
 //Sam Holden
