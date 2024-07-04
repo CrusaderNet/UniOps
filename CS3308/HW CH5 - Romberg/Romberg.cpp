@@ -19,7 +19,7 @@ double functionOne(double x){
 
 //Function for Question 2(c)
 double functionTwo(double x){
-    return ((sin(x)*sin(x)) - (2 * sin(x)) + 1);
+    return ((sin(x)*sin(x)) - (2.0 * x * sin(x)) + 1.0);
 }
 
 int main(){
