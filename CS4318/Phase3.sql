@@ -102,7 +102,7 @@ CREATE TABLE DealerFinancialData (
     FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID)
 );
 
-
+--Dummy Data for Each Table:
 INSERT INTO Employee VALUES (1, 'John', 'Doe', 'Manager', 60000.00, 0.00, '2024-11-22');
 INSERT INTO Employee VALUES (2, 'Jane', 'Smith', 'Salesman', 40000.00, 0.10, '2024-09-21');
 INSERT INTO Employee VALUES (3, 'Mike', 'Johnson', 'Salesman', 50000.00, 0.15, '2024-10-14');
@@ -136,32 +136,16 @@ INSERT INTO Service VALUES (2, 2, 'Tire Rotation', '2024-01-21', 'Performed tire
 INSERT INTO DealerFinancialData VALUES (1, 1, 2024, 1, 55000.00, 150.00, 50000.00, 5000.00);
 INSERT INTO DealerFinancialData VALUES (2, 1, 2024, 2, 60000.00, 200.00, 55000.00, 6000.00);
 
---First Join Query
-SELECT 
-    e.EmployeeID,
-    e.FirstName,
-    e.LastName,
-    s.SaleID,
-    s.SaleDate
-FROM 
-    Employee e
-INNER JOIN 
-    Sales s ON e.EmployeeID = s.SalesmanID;
-
---Second Join Query
-SELECT 
-    c.CustomerID,
-    c.FirstName,
-    c.LastName,
-    s.SaleID,
-    v.Make,
-    v.Model
-FROM 
-    Customer c
-INNER JOIN 
-    Sales s ON c.CustomerID = s.CustomerID
-INNER JOIN 
-    Inventory v ON s.VehicleID = v.VehicleID;
+--Queries for Each Table:
+SELECT * FROM Employee;
+SELECT * FROM Customer;
+SELECT * FROM Inventory;
+SELECT * FROM Sales;
+SELECT * FROM Commission;
+SELECT * FROM Financing;
+SELECT * FROM Lease;
+SELECT * FROM Service;
+SELECT * FROM DealerFinancialData;
 
 --Aggregate Queries for Each Table:
 --Employee Table
